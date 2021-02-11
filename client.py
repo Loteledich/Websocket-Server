@@ -1,13 +1,32 @@
 import socket
 import json
+import random
+import ast
 
-HOST = '192.168.0.109'
-PORT = 33000
+HOST = '192.168.0.40'
+PORT = 33001
 BUFFER = 1024
+yourid = str(random.randint(11111111,99999999))
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((HOST,PORT))
 
-name = input('Your name: ').encode("utf8")
-client_socket.send(name)
-print( client_socket.recv(BUFFER).decode("utf8"))
+message = '''
+{   
+
+}
+'''
+data = json.loads(message)
+
+id = []
+id.append(yourid)
+
+data['code'] = input('Code: ')
+data['data'] = {"id": yourid}
+dataSEND = str(str(data).replace("\'", "\""))
+
+print(dataSEND)
+
+
+client_socket.send(str.encode(dataSEND))
+print( client_socket.recv(BUFFER).decode())
