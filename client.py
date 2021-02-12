@@ -1,10 +1,9 @@
 import socket
 import json
 import random
-import ast
 
 HOST = '192.168.0.40'
-PORT = 33001
+PORT = 33000
 BUFFER = 1024
 yourid = str(random.randint(11111111,99999999))
 

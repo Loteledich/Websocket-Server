@@ -1,0 +1,8 @@
+INFO:root:('192.168.0.40', 42266)
+INFO:root:received connection('192.168.0.40', 42272)
+
+2021-02-12 15:59:42,603:INFO:Server starts:
+2021-02-12 16:04:18,818:INFO:received connection from: ('192.168.0.40', 42958):
+2021-02-12 16:04:29,122:CRITICAL:Server has been interrupted:
+2021-02-12 16:04:29,216:INFO:Server starts:
+2021-02-12 16:04:29,216:CRITICAL:Client is blocking PORT:
