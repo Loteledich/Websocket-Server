@@ -25,8 +25,5 @@ data['code'] = input('Code: ')
 data['data'] = {"id": yourid}
 dataSEND = str(str(data).replace("\'", "\""))
 
-print(dataSEND)
-
-
 client_socket.send(str.encode(dataSEND))
 print( client_socket.recv(BUFFER).decode())
